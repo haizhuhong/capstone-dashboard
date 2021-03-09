@@ -28,10 +28,8 @@ import string
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 ### Data preparation 
-# Set working directory to where all the datasets are 
-os.chdir('/Users/haizhuhong/Documents/UVA DataScience/Spring2021/Capstone/Semester2-main/datasets')
 # Upload the datasets you need & save
-data = pd.read_csv ('Math_WWC_with_EricID.csv')
+data = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/blob/main/WWC_with_EricID_0301.csv', low_memory=False)
 
 # Subset for the only two columns we'll analyze
 data2 = data[['title', 'description']]
