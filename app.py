@@ -26,7 +26,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 ### Data preparation 
 # Upload the datasets you need & save
-data = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/blob/main/WWC_with_EricID_0301.csv', low_memory=False)
+data = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/WWC_with_EricID_0301.csv', low_memory=False)
 
 # Subset for the only two columns we'll analyze
 data2 = data[['title', 'description']]
