@@ -3,8 +3,6 @@ import gensim
 import pandas as pd
 import os
 import string
-from matplotlib import pyplot as plt
-import seaborn as sns
 import numpy as np
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
