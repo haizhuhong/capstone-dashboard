@@ -29,14 +29,14 @@ markdown_text = """
 
 ### Scatterplot
 fig_1 = px.scatter(tfidf_rank, 'term_rank', 'TF-IDF', hover_name='sub_indicator', hover_data=['TF-IDF', 'TF-IDF_Z'], log_x = True)
-fig_1.layout.width = 1400
+fig_1.layout.width = 1280
 fig_1.layout.height = 650
 
 ### Horizontal Bar Charts
 unigrams_top30 = unigrams.sort_values('TF-IDF_Z', ascending=False).head(30)
 unigrams_keywords_top30 = unigrams_keywords.sort_values('TF-IDF_Z', ascending=False).head(30)
-fig_2 = px.bar(unigrams_top30, x='sub_indicator', y='TF-IDF_Z', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
-fig_3 = px.bar(unigrams_keywords_top30, x='sub_indicator', y='TF-IDF_Z', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_2 = px.bar(unigrams_top30, x='sub_indicator', y='TF-IDF_Z', hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_3 = px.bar(unigrams_keywords_top30, x='sub_indicator', y='TF-IDF_Z', hover_data=['TF-IDF', 'TF-IDF_Z'])
 ### Create app
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
