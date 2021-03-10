@@ -58,13 +58,13 @@ app.layout = html.Div(
         
         html.Div([
             
-            html.H4("Top 30 Unigrams in WWW Math Corpus"),
+            html.H4("Top 30 Unigrams in WWC Math Corpus"),
             
             dcc.Graph(figure=fig_2)], style = {'width':'50%', 'float':'left'}),
         
         html.Div([
             
-            html.H4("Top 30 Unigram Indicators in WWW Math Corpus"),
+            html.H4("Top 30 Unigram Indicators in WWC Math Corpus"),
             
             dcc.Graph(figure=fig_3)], style = {'width':'50%', 'float':'right'}),
         
