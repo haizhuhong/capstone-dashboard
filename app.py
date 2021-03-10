@@ -19,12 +19,12 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 ### Data preparation 
 # Upload the datasets you need & save
 tfidf_rank = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/dashboard_data.csv', low_memory=False)
-unigrams = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/unigram_tfidf_scores_math.csv', low_memory=False)
-unigrams_keywords = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/unigrams_keywords_math.csv', low_memory=False)
-bigrams = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/bigram_tfidf_scores_math.csv', low_memory=False)
-bigrams_keywords = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/bigrams_keywords_math.csv', low_memory=False)
-alldata = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/all_tfidf_math.csv', low_memory=False)
-alldata_keywords = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/all_tfidf_keywords_math.csv', low_memory=False)
+unigrams_math = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/unigram_tfidf_scores_math.csv', low_memory=False)
+unigrams_keywords_math = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/unigrams_keywords_math.csv', low_memory=False)
+bigrams_math = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/bigram_tfidf_scores_math.csv', low_memory=False)
+bigrams_keywords_math = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/bigrams_keywords_math.csv', low_memory=False)
+alldata_math = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/all_tfidf_math.csv', low_memory=False)
+alldata_keywords_math = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/main/all_tfidf_keywords_math.csv', low_memory=False)
 
 
 markdown_text = """
@@ -39,20 +39,14 @@ fig_1.layout.height = 650
 
 ### Horizontal Bar Charts
 #Unigrams
-unigrams_top30 = unigrams.sort_values('TF-IDF_Z', ascending=False).head(30)
-unigrams_keywords_top30 = unigrams_keywords.sort_values('TF-IDF_Z', ascending=False).head(30)
-fig_2 = px.bar(unigrams_top30, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
-fig_3 = px.bar(unigrams_keywords_top30, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_2 = px.bar(unigrams_math, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_3 = px.bar(unigrams_keywords_math, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 #Bigrams
-bigrams_top30 = bigrams.sort_values('TF-IDF_Z', ascending=False).head(30)
-bigrams_keywords_top30 = bigrams_keywords.sort_values('TF-IDF_Z', ascending=False).head(30)
-fig_4 = px.bar(bigrams_top30, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
-fig_5 = px.bar(bigrams_keywords_top30, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_4 = px.bar(bigrams_math, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_5 = px.bar(bigrams_keywords_math, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 #All_data
-alldata_top30 = alldata.sort_values('TF-IDF_Z', ascending=False).head(30)
-alldata_keywords_top30 = alldata_keywords.sort_values('TF-IDF_Z', ascending=False).head(30)
-fig_6 = px.bar(unigrams_top30, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
-fig_7 = px.bar(unigrams_keywords_top30, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_6 = px.bar(alldata_math, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
+fig_7 = px.bar(alldata_keywords_math, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 
 ### Create app
 app = Dash(__name__, external_stylesheets=external_stylesheets)
