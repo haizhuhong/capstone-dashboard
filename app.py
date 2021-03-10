@@ -23,13 +23,12 @@ tfidf_rank = pd.read_csv('https://github.com/haizhuhong/capstone-dashboard/raw/m
 
 markdown_text = """
 
-Interactive Scatterplot for WWC Corpus TFIDF Results.
 
 """
 
 ### Scatterplot
 fig_1 = px.scatter(tfidf_rank, 'term_rank', 'TF-IDF', hover_name='sub_indicator', hover_data=['TF-IDF', 'TF-IDF_Z'], log_x = True, height=600)
-fig_1.layout.width = 700
+fig_1.layout.width = 1400
 fig_1.layout.height = 650
 
 ### Create app
