@@ -48,18 +48,30 @@ fig_1.layout.height = 650
 #Unigrams
 fig_2 = px.bar(unigrams_math, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_2.update_layout(yaxis=dict(autorange='reversed'))
+fig_2.layout.width = 640
+fig_2.layout.height = 600
 fig_3 = px.bar(unigrams_keywords_math, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_3.update_layout(yaxis=dict(autorange='reversed'))
+fig_3.layout.width = 640
+fig_3.layout.height = 600
 #Bigrams
 fig_4 = px.bar(bigrams_math, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_4.update_layout(yaxis=dict(autorange='reversed'))
+fig_4.layout.width = 640
+fig_4.layout.height = 600
 fig_5 = px.bar(bigrams_keywords_math, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_5.update_layout(yaxis=dict(autorange='reversed'))
+fig_5.layout.width = 640
+fig_5.layout.height = 600
 #All_data
 fig_6 = px.bar(alldata_math, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_6.update_layout(yaxis=dict(autorange='reversed'))
+fig_6.layout.width = 640
+fig_6.layout.height = 600
 fig_7 = px.bar(alldata_keywords_math, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_7.update_layout(yaxis=dict(autorange='reversed'))
+fig_7.layout.width = 640
+fig_7.layout.height = 600
 
 ## Reading
 #Unigrams
