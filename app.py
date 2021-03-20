@@ -77,18 +77,30 @@ fig_7.layout.height = 600
 #Unigrams
 fig_8 = px.bar(unigrams_reading, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_8.update_layout(yaxis=dict(autorange='reversed'))
+fig_8.layout.width = 640
+fig_8.layout.height = 600
 fig_9 = px.bar(unigrams_keywords_reading, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_9.update_layout(yaxis=dict(autorange='reversed'))
+fig_9.layout.width = 640
+fig_9.layout.height = 600
 #Bigrams
 fig_10 = px.bar(bigrams_reading, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_10.update_layout(yaxis=dict(autorange='reversed'))
+fig_10.layout.width = 640
+fig_10.layout.height = 600
 fig_11 = px.bar(bigrams_keywords_reading, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_11.update_layout(yaxis=dict(autorange='reversed'))
+fig_11.layout.width = 640
+fig_11.layout.height = 600
 #All_data
 fig_12 = px.bar(alldata_reading, x='TF-IDF_Z', y='sub_indicator', orientation='h', hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_12.update_layout(yaxis=dict(autorange='reversed'))
+fig_12.layout.width = 640
+fig_12.layout.height = 600
 fig_13 = px.bar(alldata_keywords_reading, x='TF-IDF_Z', y='sub_indicator', orientation='h',hover_data=['TF-IDF', 'TF-IDF_Z'])
 fig_13.update_layout(yaxis=dict(autorange='reversed'))
+fig_13.layout.width = 640
+fig_13.layout.height = 600
 
 ### Create app
 app = Dash(__name__, external_stylesheets=external_stylesheets)
